@@ -49,12 +49,12 @@ if(isset($_POST['modifier'])){
         value=<?php echo $project->getNom()?> >
     </div>
   
-    <div>
-        <label for="description">description</label>
-        <input type="text" required="required"  
-        id="description"  name="description" placeholder="description"
-        value=<?php echo $project->getDescription()?>>
-    </div>
+<div>
+  <label for="description">description</label>
+  <input type="text" required="required"  
+    id="description"  name="description" placeholder="description"
+    value="<?php echo $project->getDescription()?>">
+</div>
     <div>
         <input name="modifier" type="submit" value="Modifier">
         <a href="../index.php">Annuler</a>
