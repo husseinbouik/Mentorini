@@ -33,3 +33,12 @@ VALUES
   (2, 'Master of Science', 'University of DEF', 2016),
   (3, 'PhD in Computer Science', 'University of PQR', 2019),
   (3, 'Master of Business Administration', 'University of MNO', 2021);
+
+ALTER TABLE credentials
+DROP FOREIGN KEY credentials_ibfk_1;
+
+ALTER TABLE credentials
+ADD CONSTRAINT credentials_ibfk_1
+FOREIGN KEY (expert_id)
+REFERENCES expert(expert_id)
+ON DELETE CASCADE;

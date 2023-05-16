@@ -29,8 +29,6 @@ if (!empty($_POST)) {
 	header("Location: ../index.php");
 }
 ?>
-?>
-
 <!DOCTYPE html>
 <html lang="fr">
 
