@@ -1,8 +1,8 @@
 <?php
-include "./managers/GestionProject.php";
-// Trouver tous les employés depuis la base de données 
-$GestionProject = new GestionProject();
-$projects = $GestionProject->RechercherTous();
+include "./managers/GestionExpert.php";
+// Retrieve all experts from the database
+$gestionExpert = new GestionExpert();
+$experts = $gestionExpert->RechercherTous();
 ?>
 
 <!DOCTYPE html>
@@ -13,31 +13,43 @@ $projects = $GestionProject->RechercherTous();
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./UI/style/file.css">
-    <title>Gestion des employés</title>
+    <title>Gestion des experts</title>
 </head>
 
 <body>
     <div>
-        <a href="./UI/Ajoute.php">Ajouter un project</a>
+        <a href="./UI/addExpert.php">Ajouter un expert</a>
         <table>
             <tr>
                 <th>Name</th>
-                <th>Description</th>
+                <th>Expertise</th>
+                <th>Email</th>
+                <th>Phone</th>
+                <th>Location</th>
                 <th>Action</th>
             </tr>
             <?php
-            foreach ($projects as $project) {
+            foreach ($experts as $expert) {
                 ?>
                 <tr>
                     <td>
-                        <?= $project->getNom() ?>
+                        <?= $expert->getName() ?>
                     </td>
                     <td>
-                        <?= $project->getDescription() ?>
+                        <?= $expert->getExpertise() ?>
                     </td>
                     <td>
-                        <a href="./UI/edit.php?Id_Project=<?php echo $project->getId() ?>">Éditer</a>
-                        <a href="./UI/delet.php?Id_Project=<?php echo $project->getId() ?>">Supprimer</a>
+                        <?= $expert->getEmail() ?>
+                    </td>
+                    <td>
+                        <?= $expert->getPhone() ?>
+                    </td>
+                    <td>
+                        <?= $expert->getLocation() ?>
+                    </td>
+                    <td>
+                        <a href="./UI/edit.php?Id_Expert=<?php echo $expert->getId() ?>">Edit</a>
+                        <a href="./UI/delet.php?Id_Expert=<?php echo $expert->getId() ?>">Delete</a>
                     </td>
                 </tr>
             <?php } ?>

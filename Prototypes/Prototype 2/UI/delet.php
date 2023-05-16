@@ -1,8 +1,8 @@
 <?php
-if (file_exists('./managers/GestionProject.php')) {
-	include './managers/GestionProject.php';
-} elseif (file_exists('../managers/GestionProject.php')) {
-	include '../managers/GestionProject.php';
+if (file_exists('./managers/GestionExpert.php')) {
+	include './managers/GestionExpert.php';
+} elseif (file_exists('../managers/GestionExpert.php')) {
+	include '../managers/GestionExpert.php';
 } else {
 	// Neither file exists, so handle the error here
 	echo "Error: Project.php not found in either directory.";
@@ -11,9 +11,9 @@ if (file_exists('./managers/GestionProject.php')) {
 if(isset($_GET['Id_Project'])){
 
     // Trouver tous les employés depuis la base de données 
-    $gestionProject= new GestionProject();
+    $GestionExpert= new GestionExpert();
     $id = $_GET['Id_Project'] ;
-    $gestionProject->Supprimer($id);
+    $GestionExpert->Supprimer($id);
         
     header('Location: ../index.php');
 }

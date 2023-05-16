@@ -8,7 +8,7 @@ if (file_exists('./Entitys/projet.php')) {
     // Neither file exists, so handle the error here
     echo "Error: projet.php not found in either directory.";
 }
-class GestionProject
+class GestionExpert
 {
     private $Connection = Null;
 

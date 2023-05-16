@@ -1,26 +1,26 @@
 <?php
 
 
-if (file_exists('./managers/GestionProject.php')) {
-	include './managers/GestionProject.php';
-} elseif (file_exists('../managers/GestionProject.php')) {
-	include '../managers/GestionProject.php';
+if (file_exists('./managers/GestionExpert.php')) {
+	include './managers/GestionExpert.php';
+} elseif (file_exists('../managers/GestionExpert.php')) {
+	include '../managers/GestionExpert.php';
 } else {
 	// Neither file exists, so handle the error here
 	echo "Error: Project.php not found in either directory.";
 }
 
-$gestionProject = new GestionProject();
+$GestionExpert = new GestionExpert();
 
 if(isset($_GET['Id_Project'])){
-    $project = $gestionProject->RechercherParId($_GET['Id_Project']);
+    $project = $GestionExpert->RechercherParId($_GET['Id_Project']);
 }
 
 if(isset($_POST['modifier'])){
     $id = $_POST['Id_Project'];
     $nom = $_POST['name'];
     $description = $_POST['description'];
-    $gestionProject->Modifier($id,$nom,$description);
+    $GestionExpert->Modifier($id,$nom,$description);
     header('Location: ../index.php');
 }
 ?>

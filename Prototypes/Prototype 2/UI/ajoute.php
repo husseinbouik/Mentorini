@@ -1,25 +1,25 @@
 <?php
 
 
-if (file_exists('./managers/GestionProject.php')) {
-	include './managers/GestionProject.php';
-} elseif (file_exists('../managers/GestionProject.php')) {
-	include '../managers/GestionProject.php';
+if (file_exists('./managers/GestionExpert.php')) {
+	include './managers/GestionExpert.php';
+} elseif (file_exists('../managers/GestionExpert.php')) {
+	include '../managers/GestionExpert.php';
 } else {
 	// Neither file exists, so handle the error here
 	echo "Error: Project.php not found in either directory.";
 }
 
 // Trouver tous les employés depuis la base de données 
-$gestionProject = new GestionProject();
-$projects = $gestionProject->RechercherTous();
+$GestionExpert = new GestionExpert();
+$projects = $GestionExpert->RechercherTous();
 
 if (!empty($_POST)) {
 	$project = new  project();
 	$project->setId($_POST['Id_Project']);
 	$project->setNom($_POST['name']);
 	$project->setDescription($_POST['description']);
-	$gestionProject->Ajouter($project);
+	$GestionExpert->Ajouter($project);
 
 	// Redirection vers la page index.php
 	header("Location: ../index.php");

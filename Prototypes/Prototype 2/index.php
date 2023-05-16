@@ -1,8 +1,8 @@
 <?php
-include "./managers/GestionProject.php";
+include "./managers/GestionExpert.php";
 // Trouver tous les employés depuis la base de données 
-$GestionProject = new GestionProject();
-$projects = $GestionProject->RechercherTous();
+$GestionExpert = new GestionExpert();
+$projects = $GestionExpert->RechercherTous();
 ?>
 
 <!DOCTYPE html>

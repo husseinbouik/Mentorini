@@ -1,62 +1,60 @@
 
 
 <?php
-
- class project {
-
-    private $Id_Project;
+class Expert {
+    private $expert_id;
     private $name;
-    private $description;
+    private $expertise;
+    private $email;
+    private $phone;
+    private $location;
 
-
-    public function getId() { 
-        return $this->Id_Project;
+    public function getId() {
+        return $this->expert_id;
     }
-    public function setId($Id_Project) {
-        $this->Id_Project =$Id_Project;
+
+    public function setId($expert_id) {
+        $this->expert_id = $expert_id;
     }
 
-    public function getNom() {
+    public function getName() {
         return $this->name;
     }
-    public function setNom($name) {
+
+    public function setName($name) {
         $this->name = $name;
     }
 
-    public function getDescription() {
-        return $this->description;
-    }
-  
-    public function setDescription($description) {
-        $this->description = $description;
+    public function getExpertise() {
+        return $this->expertise;
     }
 
- 
+    public function setExpertise($expertise) {
+        $this->expertise = $expertise;
+    }
 
+    public function getEmail() {
+        return $this->email;
+    }
 
+    public function setEmail($email) {
+        $this->email = $email;
+    }
 
+    public function getPhone() {
+        return $this->phone;
+    }
 
+    public function setPhone($phone) {
+        $this->phone = $phone;
+    }
 
+    public function getLocation() {
+        return $this->location;
+    }
 
-
-
-
-
-
-
-
-
-
-
+    public function setLocation($location) {
+        $this->location = $location;
+    }
 }
-
-
-
-
-
-
-
-
-
-
 ?>
