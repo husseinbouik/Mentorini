@@ -19,7 +19,7 @@ $credentials = $gestionCredentials->RechercherCredentialsParExpertId($expert_id)
 
 <body>
     <div>
-        <a href="./UI/addCredential.php">Add a Credential</a>
+        <a href="addCredential.php?Id_Expert=<?php echo $expert_id ?>">Add a Credential</a>
         <table>
             <tr>
                 <th>Expert ID</th>
@@ -51,6 +51,7 @@ $credentials = $gestionCredentials->RechercherCredentialsParExpertId($expert_id)
                 </tr>
             <?php } ?>
         </table>
+        <a class="btn btn-info" href="../index.php">Annuler</a>
     </div>
 </body>
 

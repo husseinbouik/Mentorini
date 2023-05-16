@@ -64,9 +64,9 @@ class GestionCredentials
         return $credential;
     }
 
-    public function SupprimerCredentialsParExpertId($expert_id)
+    public function SupprimerCredentialsParExpertId($expert_id,$id_credential)
     {
-        $sql = "DELETE FROM credentials WHERE expert_id = '$expert_id'";
+        $sql = "DELETE FROM credentials WHERE expert_id = '$expert_id' AND credential_id = '$id_credential'";
         mysqli_query($this->getConnection(), $sql);
     }
 
