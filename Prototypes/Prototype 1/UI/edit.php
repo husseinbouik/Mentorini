@@ -44,7 +44,7 @@ if (isset($_POST['modifier'])) {
 
     <h1>Modification de l'Expert : <?=$expert->getName()?></h1>
     <form method="post" action="">
-        <input type="text" required="required"
+        <input type="hidden" required="required"
             id="Id" name="Id_Expert"
             value="<?php echo $expert->getId()?>">
 
