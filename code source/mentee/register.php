@@ -41,20 +41,15 @@ if ($uploadOk == 0) {
             exit();
         }
 
-        // Check if the password and confirmation match
-        // if ($_POST['Password'] != $_POST['ConfirmPassword']) {
-        //     $message = 'Password and confirmation do not match.';
-        //     $_SESSION['message'] = $message;
-        //     header("Location: signUp.php");
-        //     exit();
-        // }
+        // Hash the password
+        $hashed_password = password_hash($password, PASSWORD_DEFAULT);
 
         $sql = "INSERT INTO Mentee (first_name, last_name, email, password, image_path) VALUES (:first_name, :last_name, :email, :password, :image_path)";
         $stmt = $db->prepare($sql);
         $stmt->bindParam(':first_name', $first_name);
         $stmt->bindParam(':last_name', $last_name);
         $stmt->bindParam(':email', $email);
-        $stmt->bindParam(':password', $password);
+        $stmt->bindParam(':password', $hashed_password);
         $stmt->bindParam(':image_path', $profile_picture_name);
         $stmt->execute();
 
@@ -71,5 +66,5 @@ if ($uploadOk == 0) {
 }
 
 // Redirect the user to the homepage
-header("Location: homepage.php");
+header("Location: signIn-mentee.php");
 ?>

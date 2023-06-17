@@ -7,6 +7,7 @@ class Mentee {
     private $created_at;
     private $image_path;
     private $password;
+    private $db;
 
     public function getMenteeId() {
         return $this->mentee_id;
@@ -62,5 +63,5 @@ class Mentee {
 
     public function setPassword($password) {
         $this->password = $password;
-    }
+    }  
 }

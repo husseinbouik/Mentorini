@@ -50,7 +50,7 @@
                                 </div>
                                 <h6 class="h5 mb-0">Find the mentor that suits you  .</h6>
                                 <p class="text-muted mt-2 mb-5">Sign up to learn new skills and advance your career with Mentorini.</p>
-                                <form action="register.php" method="post" id="form" class="form" enctype="multipart/form-data">
+                                <form action="login.php" method="post" id="form" class="form" enctype="multipart/form-data">
                                     <div class="form-group">
                                         <label for="Email">Email address</label>
                                         <input type="email" class="form-control" id="Email" name="Email" />

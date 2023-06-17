@@ -103,7 +103,7 @@
                 <!-- end card-body -->
             </div>
             <!-- end card -->
-            <p class="text-muted text-center mt-3 mb-0">You Don't have an account? <a href="signIn-mentee.html" class="text-primary ml-1">Register</a></p>
+            <p class="text-muted text-center mt-3 mb-0">You Don't have an account? <a href="signIn-mentee.php" class="text-primary ml-1">Register</a></p>
             <!-- end row -->
         </div>
         <!-- end col -->
