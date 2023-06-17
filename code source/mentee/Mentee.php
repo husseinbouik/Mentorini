@@ -64,4 +64,26 @@ class Mentee {
     public function setPassword($password) {
         $this->password = $password;
     }  
+    public function get_mentee_by_id($mentee_id) {
+        // Connect to the database
+        $this->db = new PDO('mysql:host=localhost;dbname=mentorini', 'root', '');
+    
+        // Prepare the SQL query to select the mentee with the given ID
+        $sql = 'SELECT * FROM Mentee WHERE mentee_id = ?';
+        $stmt = $this->db->prepare($sql);
+        $stmt->execute([$mentee_id]);
+    
+        // Fetch the mentee's data from the database
+        $mentee_data = $stmt->fetch(PDO::FETCH_ASSOC);
+    
+        // Set the mentee object's properties based on the retrieved data
+        $this->setFirstName($mentee_data['first_name']);
+        $this->setLastName($mentee_data['last_name']);
+        $this->setEmail($mentee_data['email']);
+        $this->setPassword($mentee_data['password']);
+     $this->setImagePath($mentee_data['image_path']);
+        // Store the mentee object in the session
+        $_SESSION['mentee'] = $this;
+    }
+
 }
