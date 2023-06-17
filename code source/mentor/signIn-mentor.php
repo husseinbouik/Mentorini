@@ -41,7 +41,7 @@
                             <hr>
                         </form>
                         <div class="text-center"><a class="small" href="forgot-password.html">Forgot Password?</a></div>
-                        <div class="text-center"><a class="small" href="signUp-mentor.html">Create an Account!</a></div>
+                        <div class="text-center"><a class="small" href="signUp-mentor.php">Create an Account!</a></div>
                     </div>
                 </div>
             </div>

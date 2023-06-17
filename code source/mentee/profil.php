@@ -35,208 +35,72 @@
     <link rel="stylesheet" href="assets/css/Tamplate-SB-Admin-on-BSS.css">
     <link rel="stylesheet" href="assets/css/Testimonials-images.css">
     <link rel="stylesheet" href="assets/css/Whatsapp-flotating-button.css">
-<script src="https://kit.fontawesome.com/0e22389e8c.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
-    <div class="container" style="margin-top: 130px;">
-        <div class="row" style="margin-bottom: 28px;">
-            <div class="col">
-                <h2 class="display-2 text-capitalize fw-bold text-start mb-3" data-aos="fade-right" data-aos-duration="1000" id="slogan"><br><strong>Mentorini : <span style="color: rgb(14, 17, 18);">The Best Way to Find a Mentor</span></strong><br><br></h2>
+    <div class="container-fluid" style="margin-top: 120px;">
+        <h3 class="text-dark mb-4">Profile</h3>
+        <div class="card shadow mb-3">
+            <div class="card-header py-3">
+                <p class="text-primary m-0 fw-bold">User Settings</p>
             </div>
-            <div class="col-md-6 col-xxl-5"><img class="img-homepage" src="assets/img/undraw_programming_re_kg9v.svg" max-width="535" max-height="369" style="margin-top: 40px;" width="640" height="466"></div>
+            <div class="card-body">
+                <form>
+                    <div class="row" style="margin-bottom: 25px;text-align: left;">
+                        <div class="col-sm-4 col-md-4 col-lg-3 col-xl-2 col-xxl-2" style="display: inline;text-align: center;margin-bottom: 25px;"><img class="rounded-circle mb-3 mt-4 img-fluid" src="assets/img/dogs/image2.jpeg" style="display: inline;max-height: 110px;" width="110" height="110"><br>
+                            <div id="modal-open-8">
+                                <div class="modal fade" role="dialog" tabindex="-1" id="exampleModal" aria-labelledby="exampleModalLabel">
+                                    <div class="modal-dialog" role="document">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h4>Modal Title</h4><button class="btn-close" type="button" aria-label="Close" data-bs-dismiss="modal"></button>
+                                            </div>
+                                            <div class="modal-body">
+                                                <div class="row">
+                                                    <div class="col-sm-12 col-md-8 col-lg-8 offset-sm-0 offset-md-2">
+                                                        <div class="file-upload-wrapper">
+                                                            <div class="view file-upload" style="padding-bottom: 7px;padding-right: 4px;"><input class="form-control file_upload" type="file" id="input-file-now-1"></div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="modal-footer"><button class="btn btn-primary btn-sm ment-btn-style" type="button">Change Photo</button><button class="btn btn-warning" style="background-color: rgb(255,139,160);" type="button" data-bs-dismiss="modal">Close</button></div>
+                                        </div>
+                                    </div>
+                                </div><button class="btn btn-warning" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal">change your&nbsp; change</button>
+                            </div>
+                        </div>
+                        <div class="col-sm-8 col-md-8 col-lg-9 col-xl-10 col-xxl-10 align-self-center">
+                            <div class="row">
+                                <div class="col-md-12 text-start">
+                                    <div class="mb-3"><label class="form-label" for="email"><strong>Email Address</strong></label><input class="form-control" type="email" id="email" placeholder="user@example.com" name="email" required=""></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 text-start">
+                            <div class="mb-3"><label class="form-label" for="username"><strong>Current Password</strong></label><input class="form-control" type="password" id="password" placeholder="Password"></div>
+                        </div>
+                        <div class="col-md-6 text-start">
+                            <div class="mb-3"><label class="form-label" for="username"><strong>New Password</strong></label><input class="form-control" type="password" id="password-1" placeholder="Password"></div>
+                        </div>
+                        <div class="col-md-6 text-start">
+                            <div class="mb-3"><label class="form-label" for="username"><strong>Confirm Password</strong></label><input class="form-control" type="password" id="verifyPassword" placeholder="Password"></div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="mb-3"><label class="form-label" for="first_name"><strong>First Name</strong></label><input class="form-control" type="text" placeholder="John" name="first_name" required=""></div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="mb-3"><label class="form-label" for="last_name"><strong>Last Name</strong></label><input class="form-control" type="text" placeholder="Doe" name="last_name" required=""></div>
+                        </div>
+                        <div class="col">
+                            <p id="emailErrorMsg" class="text-danger" style="display: none;"></p>
+                            <p id="passwordErrorMsg" class="text-danger" style="display: none;"></p>
+                        </div>
+                        <div class="col-md-12" style="text-align: right;margin-top: 5px;"><button class="btn btn-primary btn-sm" id="submitBtn" type="submit">Save Settings</button></div>
+                    </div>
+                </form>
+            </div>
         </div>
-    </div>				<div class="caption v-middle text-center">
-					<h1 class="cd-headline clip">
-			            <span class="blc">Become a </span>
-			            <span class="cd-words-wrapper">
-			              <b class="is-visible">Designer.</b>
-			              <b>Developer.</b>
-			              <b>Trader.</b>
-        	              <b>Software Engineer.</b>
-			              <b>Data scientist.</b>
-
-			            </span>
-	          		</h1>
-				</div>
-
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-
-    <div class="container py-4 py-xl-5">
-        <section class="py-5">
-            <div class="container">
-                <h1 class="text-center mb-4">FILTERABLE CARDS</h1>
-                <div class="d-flex justify-content-center h-100">
-                    <div class="searchbar"><input type="text" class="search_input" placeholder="Search..."><a class="search_icon" href="#"><i class="fas fa-search"></i></a></div>
-                </div>
-                <div class="filtr-controls text-center lead text-uppercase mb-3"><span class="active d-inline-block mx-3 py-1 position-relative" data-filter="all">all </span><span class="d-inline-block mx-3 py-1 position-relative" data-filter="1">category 1 </span><span class="d-inline-block mx-3 py-1 position-relative" data-filter="2">category 2 </span><span class="d-inline-block mx-3 py-1 position-relative" data-filter="3">category 3 </span></div>
-                <div class="row filtr-container">
-                    <div class="col-md-6 col-lg-4 filtr-item" data-category="2,3">
-                        <div class="card"><img class="card-img-top w-100 d-block fit-cover" style="height: 200px;" src="https://cdn.bootstrapstudio.io/placeholders/1400x800.png">
-                            <div class="card-body p-4">
-                                <p class="text-primary card-text mb-0">Article</p>
-                                <h4 class="card-title">Lorem libero donec</h4>
-                                <p class="card-text">Nullam id dolor id nibh ultricies vehicula ut id elit. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus.</p>
-                                <div>
-                                    <div class="d-flex"><img class="rounded-circle flex-shrink-0 me-3 fit-cover" width="50" height="50" src="https://cdn.bootstrapstudio.io/placeholders/1400x800.png">
-                                        <div>
-                                            <p class="fw-bold mb-0">John Smith</p>
-                                            <p class="text-muted mb-0">Erat netus</p>
-                                        </div>
-                                    </div>
-                                    <div style="width: 105px;"><button class="button btndetails" type="button" data-hover="SURE!"><span><i class="fa-solid fa-eye"></i></span></button></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-lg-4 filtr-item" data-category="1,3">
-                        <div class="card"><img class="card-img-top w-100 d-block fit-cover" style="height: 200px;" src="https://cdn.bootstrapstudio.io/placeholders/1400x800.png">
-                            <div class="card-body p-4">
-                                <p class="text-primary card-text mb-0">Article</p>
-                                <h4 class="card-title">Lorem libero donec</h4>
-                                <p class="card-text">Nullam id dolor id nibh ultricies vehicula ut id elit. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus.</p>
-                                <div>
-                                    <div class="d-flex"><img class="rounded-circle flex-shrink-0 me-3 fit-cover" width="50" height="50" src="https://cdn.bootstrapstudio.io/placeholders/1400x800.png">
-                                        <div>
-                                            <p class="fw-bold mb-0">John Smith</p>
-                                            <p class="text-muted mb-0">Erat netus</p>
-                                        </div>
-                                    </div>
-                                    <div style="width: 105px;"><button class="button btndetails" type="button" data-hover="SURE!"><span><i class="fa-solid fa-eye"></i></span></button></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-lg-4 filtr-item" data-category="2,3">
-                        <div class="card"><img class="card-img-top w-100 d-block fit-cover" style="height: 200px;" src="https://cdn.bootstrapstudio.io/placeholders/1400x800.png">
-                            <div class="card-body p-4">
-                                <p class="text-primary card-text mb-0">Article</p>
-                                <h4 class="card-title">Lorem libero donec</h4>
-                                <p class="card-text">Nullam id dolor id nibh ultricies vehicula ut id elit. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus.</p>
-                                <div>
-                                    <div class="d-flex"><img class="rounded-circle flex-shrink-0 me-3 fit-cover" width="50" height="50" src="https://cdn.bootstrapstudio.io/placeholders/1400x800.png">
-                                        <div>
-                                            <p class="fw-bold mb-0">John Smith</p>
-                                            <p class="text-muted mb-0">Erat netus</p>
-                                        </div>
-                                    </div>
-                                    <div style="width: 105px;"><button class="button btndetails" type="button" data-hover="SURE!"><span><i class="fa-solid fa-eye"></i></span></button></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-lg-4 filtr-item" data-category="3">
-                        <div class="card"><img class="card-img-top w-100 d-block fit-cover" style="height: 200px;" src="https://cdn.bootstrapstudio.io/placeholders/1400x800.png">
-                            <div class="card-body p-4">
-                                <p class="text-primary card-text mb-0">Article</p>
-                                <h4 class="card-title">Lorem libero donec</h4>
-                                <p class="card-text">Nullam id dolor id nibh ultricies vehicula ut id elit. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus.</p>
-                                <div>
-                                    <div class="d-flex"><img class="rounded-circle flex-shrink-0 me-3 fit-cover" width="50" height="50" src="https://cdn.bootstrapstudio.io/placeholders/1400x800.png">
-                                        <div>
-                                            <p class="fw-bold mb-0">John Smith</p>
-                                            <p class="text-muted mb-0">Erat netus</p>
-                                        </div>
-                                    </div>
-                                    <div style="width: 105px;"><button class="button btndetails" type="button" data-hover="SURE!"><span><i class="fa-solid fa-eye"></i></span></button></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-lg-4 filtr-item" data-category="1,2">
-                        <div class="card"><img class="card-img-top w-100 d-block fit-cover" style="height: 200px;" src="https://cdn.bootstrapstudio.io/placeholders/1400x800.png">
-                            <div class="card-body p-4">
-                                <p class="text-primary card-text mb-0">Article</p>
-                                <h4 class="card-title">Lorem libero donec</h4>
-                                <p class="card-text">Nullam id dolor id nibh ultricies vehicula ut id elit. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus.</p>
-                                <div>
-                                    <div class="d-flex"><img class="rounded-circle flex-shrink-0 me-3 fit-cover" width="50" height="50" src="https://cdn.bootstrapstudio.io/placeholders/1400x800.png">
-                                        <div>
-                                            <p class="fw-bold mb-0">John Smith</p>
-                                            <p class="text-muted mb-0">Erat netus</p>
-                                        </div>
-                                    </div>
-                                    <div style="width: 105px;"><button class="button btndetails" type="button" data-hover="SURE!"><span><i class="fa-solid fa-eye"></i></span></button></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-lg-4 filtr-item" data-category="1,3">
-                        <div class="card"><img class="card-img-top w-100 d-block fit-cover" style="height: 200px;" src="https://cdn.bootstrapstudio.io/placeholders/1400x800.png">
-                            <div class="card-body p-4">
-                                <p class="text-primary card-text mb-0">Article</p>
-                                <h4 class="card-title">Lorem libero donec</h4>
-                                <p class="card-text">Nullam id dolor id nibh ultricies vehicula ut id elit. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus.</p>
-                                <div>
-                                    <div class="d-flex"><img class="rounded-circle flex-shrink-0 me-3 fit-cover" width="50" height="50" src="https://cdn.bootstrapstudio.io/placeholders/1400x800.png">
-                                        <div>
-                                            <p class="fw-bold mb-0">John Smith</p>
-                                            <p class="text-muted mb-0">Erat netus</p>
-                                        </div>
-                                    </div>
-                                    <div style="width: 105px;"><button class="button btndetails" type="button" data-hover="SURE!"><span><i class="fa-solid fa-eye"></i></span></button></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-lg-4 filtr-item" data-category="1,3">
-                        <div class="card"><img class="card-img-top w-100 d-block fit-cover" style="height: 200px;" src="https://cdn.bootstrapstudio.io/placeholders/1400x800.png">
-                            <div class="card-body p-4">
-                                <p class="text-primary card-text mb-0">Article</p>
-                                <h4 class="card-title">Lorem libero donec</h4>
-                                <p class="card-text">Nullam id dolor id nibh ultricies vehicula ut id elit. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus.</p>
-                                <div>
-                                    <div class="d-flex"><img class="rounded-circle flex-shrink-0 me-3 fit-cover" width="50" height="50" src="https://cdn.bootstrapstudio.io/placeholders/1400x800.png">
-                                        <div>
-                                            <p class="fw-bold mb-0">John Smith</p>
-                                            <p class="text-muted mb-0">Erat netus</p>
-                                        </div>
-                                    </div>
-                                    <div style="width: 105px;"><button class="button btndetails" type="button" data-hover="SURE!"><span><i class="fa-solid fa-eye"></i></span></button></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-lg-4 filtr-item" data-category="3">
-                        <div class="card"><img class="card-img-top w-100 d-block fit-cover" style="height: 200px;" src="https://cdn.bootstrapstudio.io/placeholders/1400x800.png">
-                            <div class="card-body p-4">
-                                <p class="text-primary card-text mb-0">Article</p>
-                                <h4 class="card-title">Lorem libero donec</h4>
-                                <p class="card-text">Nullam id dolor id nibh ultricies vehicula ut id elit. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus.</p>
-                                <div>
-                                    <div class="d-flex"><img class="rounded-circle flex-shrink-0 me-3 fit-cover" width="50" height="50" src="https://cdn.bootstrapstudio.io/placeholders/1400x800.png">
-                                        <div>
-                                            <p class="fw-bold mb-0">John Smith</p>
-                                            <p class="text-muted mb-0">Erat netus</p>
-                                        </div>
-                                    </div>
-                                    <div style="width: 105px;"><button class="button btndetails" type="button" data-hover="SURE!"><span><i class="fa-solid fa-eye"></i></span></button></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-lg-4 filtr-item" data-category="1">
-                        <div class="card"><img class="card-img-top w-100 d-block fit-cover" style="height: 200px;" src="https://cdn.bootstrapstudio.io/placeholders/1400x800.png">
-                            <div class="card-body p-4">
-                                <p class="text-primary card-text mb-0">Article</p>
-                                <h4 class="card-title">Lorem libero donec</h4>
-                                <p class="card-text">Nullam id dolor id nibh ultricies vehicula ut id elit. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus.</p>
-                                <div>
-                                    <div class="d-flex"><img class="rounded-circle flex-shrink-0 me-3 fit-cover" width="50" height="50" src="https://cdn.bootstrapstudio.io/placeholders/1400x800.png">
-                                        <div>
-                                            <p class="fw-bold mb-0">John Smith</p>
-                                            <p class="text-muted mb-0">Erat netus</p>
-                                        </div>
-                                    </div>
-                                    <div style="width: 105px;"><button class="button btndetails" type="button" data-hover="SURE!"><span><i class="fa-solid fa-eye"></i></span></button></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <div id="pagination" class="d-flex justify-content-center" style="margin-top: 40px;"><a class="pagination-item disabled" href="#"><img src="assets/img/icon_arrow-left.svg"><span>Previos</span></a><a class="pagination-item active" href="#">1</a><a class="pagination-item" href="#">2</a><a class="pagination-item" href="#">3</a><a class="pagination-item" href="#">...</a><a class="pagination-item" href="#"><span>Next</span><img src="assets/img/icon_arrow-right.svg"></a></div>
     </div>
     <footer>
         <div class="container py-4 py-lg-5">
@@ -287,15 +151,15 @@
         </div>
     </footer>
     <nav class="navbar navbar-light navbar-expand-md fixed-top" style="padding-top: 0px;padding-bottom: 0px;">
-        <div class="container"><a class="navbar-brand d-flex align-items-center" href="homepage.html">
+        <div class="container"><a class="navbar-brand d-flex align-items-center" href="homepage.php">
                 <div class="d-flex" style="margin-left: 26px;"><span data-aos="fade-right" data-aos-duration="1000" style="margin-left: -32px;"><img src="assets/img/icons8-dumbbell-50%201.svg" width="48" height="97"><span style="font-family: 'Vidaloka';margin-left: 8px;">MENTORINI</span></span></div>
             </a><button data-bs-toggle="collapse" class="navbar-toggler" data-bs-target="#navcol-3"><span class="visually-hidden">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
             <div class="collapse navbar-collapse" id="navcol-3" style="margin-right: -3px;">
                 <ul class="navbar-nav mx-auto">
-                    <li class="nav-item"><a class="nav-link active fw-semibold" href="homepage.html"><i class="fas fa-home" style="margin-right: 4px;font-size: 18px;"></i>Home&nbsp;</a></li>
+                    <li class="nav-item"><a class="nav-link fw-semibold" href="homepage.php"><i class="fas fa-home" style="margin-right: 4px;font-size: 18px;"></i>Home&nbsp;</a></li>
                     <li class="nav-item"><a class="nav-link fw-semibold" href="#about"></a></li>
-                    <li class="nav-item"><a class="nav-link fw-semibold" href="Current-Mentorships.html"><i class="fas fa-window-restore" style="margin-right: 4px;font-size: 18px;"></i>Current Mentorships</a></li>
-                    <li class="nav-item"><a class="nav-link fw-semibold" href="archieve.html"><i class="fas fa-th-list" style="margin-right: 4px;font-size: 18px;"></i>Archieve</a></li>
+                    <li class="nav-item"><a class="nav-link fw-semibold" href="#"><i class="fas fa-window-restore" style="margin-right: 4px;font-size: 18px;"></i>Current Mentorships</a></li>
+                    <li class="nav-item"><a class="nav-link fw-semibold" href="archieve.php"><i class="fas fa-th-list" style="margin-right: 4px;font-size: 18px;"></i>Archieve</a></li>
                 </ul>
                 <ul class="navbar-nav flex-nowrap ms-auto">
                     <li class="nav-item dropdown d-sm-none no-arrow"><a class="dropdown-toggle nav-link" aria-expanded="false" data-bs-toggle="dropdown" href="#"><i class="fas fa-search"></i></a>
@@ -385,7 +249,7 @@
                     <div class="d-none d-sm-block topbar-divider"></div>
                     <li class="nav-item dropdown no-arrow">
                         <div class="nav-item dropdown no-arrow"><a class="dropdown-toggle nav-link" aria-expanded="false" data-bs-toggle="dropdown" href="#"><span class="d-none d-lg-inline me-2 text-gray-600 small">Valerie luna</span><img class="border rounded-circle img-profile" src="assets/img/avatars/avatar5.jpeg" width="49" height="49"></a>
-                            <div class="dropdown-menu shadow dropdown-menu-end animated--grow-in"><a class="dropdown-item" href="profil.html"><i class="fas fa-user fa-sm fa-fw me-2 text-gray-400"></i>&nbsp;Profile</a><a class="dropdown-item" href="#"><i class="fas fa-cogs fa-sm fa-fw me-2 text-gray-400"></i>&nbsp;Settings</a><a class="dropdown-item" href="#"><i class="fas fa-list fa-sm fa-fw me-2 text-gray-400"></i>&nbsp;Activity log</a>
+                            <div class="dropdown-menu shadow dropdown-menu-end animated--grow-in"><a class="dropdown-item" href="profil.php"><i class="fas fa-user fa-sm fa-fw me-2 text-gray-400"></i>&nbsp;Profile</a><a class="dropdown-item" href="#"><i class="fas fa-cogs fa-sm fa-fw me-2 text-gray-400"></i>&nbsp;Settings</a><a class="dropdown-item" href="#"><i class="fas fa-list fa-sm fa-fw me-2 text-gray-400"></i>&nbsp;Activity log</a>
                                 <div class="dropdown-divider"></div><a class="dropdown-item" href="#"><i class="fas fa-sign-out-alt fa-sm fa-fw me-2 text-gray-400"></i>&nbsp;Logout</a>
                             </div>
                         </div>

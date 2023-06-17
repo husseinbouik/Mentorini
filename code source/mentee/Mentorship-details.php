@@ -220,15 +220,15 @@
         </div>
     </footer>
     <nav class="navbar navbar-light navbar-expand-md fixed-top" style="padding-top: 0px;padding-bottom: 0px;">
-        <div class="container"><a class="navbar-brand d-flex align-items-center" href="homepage.html">
+        <div class="container"><a class="navbar-brand d-flex align-items-center" href="homepage.php">
                 <div class="d-flex" style="margin-left: 26px;"><span data-aos="fade-right" data-aos-duration="1000" style="margin-left: -32px;"><img src="assets/img/icons8-dumbbell-50%201.svg" width="48" height="97"><span style="font-family: 'Vidaloka';margin-left: 8px;">MENTORINI</span></span></div>
             </a><button data-bs-toggle="collapse" class="navbar-toggler" data-bs-target="#navcol-3"><span class="visually-hidden">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
             <div class="collapse navbar-collapse" id="navcol-3" style="margin-right: -3px;">
                 <ul class="navbar-nav mx-auto">
-                    <li class="nav-item"><a class="nav-link fw-semibold" href="homepage.html"><i class="fas fa-home" style="margin-right: 4px;font-size: 18px;"></i>Home&nbsp;</a></li>
+                    <li class="nav-item"><a class="nav-link fw-semibold" href="homepage.php"><i class="fas fa-home" style="margin-right: 4px;font-size: 18px;"></i>Home&nbsp;</a></li>
                     <li class="nav-item"><a class="nav-link fw-semibold" href="#about"></a></li>
                     <li class="nav-item"><a class="nav-link active fw-semibold" href="#"><i class="fas fa-window-restore" style="margin-right: 4px;font-size: 18px;"></i>Current Mentorships</a></li>
-                    <li class="nav-item"><a class="nav-link fw-semibold" href="archieve.html"><i class="fas fa-th-list" style="margin-right: 4px;font-size: 18px;"></i>Archieve</a></li>
+                    <li class="nav-item"><a class="nav-link fw-semibold" href="archieve.php"><i class="fas fa-th-list" style="margin-right: 4px;font-size: 18px;"></i>Archieve</a></li>
                 </ul>
                 <ul class="navbar-nav flex-nowrap ms-auto">
                     <li class="nav-item dropdown d-sm-none no-arrow"><a class="dropdown-toggle nav-link" aria-expanded="false" data-bs-toggle="dropdown" href="#"><i class="fas fa-search"></i></a>
@@ -318,7 +318,7 @@
                     <div class="d-none d-sm-block topbar-divider"></div>
                     <li class="nav-item dropdown no-arrow">
                         <div class="nav-item dropdown no-arrow"><a class="dropdown-toggle nav-link" aria-expanded="false" data-bs-toggle="dropdown" href="#"><span class="d-none d-lg-inline me-2 text-gray-600 small">Valerie luna</span><img class="border rounded-circle img-profile" src="assets/img/avatars/avatar5.jpeg" width="49" height="49"></a>
-                            <div class="dropdown-menu shadow dropdown-menu-end animated--grow-in"><a class="dropdown-item" href="profil.html"><i class="fas fa-user fa-sm fa-fw me-2 text-gray-400"></i>&nbsp;Profile</a><a class="dropdown-item" href="#"><i class="fas fa-cogs fa-sm fa-fw me-2 text-gray-400"></i>&nbsp;Settings</a><a class="dropdown-item" href="#"><i class="fas fa-list fa-sm fa-fw me-2 text-gray-400"></i>&nbsp;Activity log</a>
+                            <div class="dropdown-menu shadow dropdown-menu-end animated--grow-in"><a class="dropdown-item" href="profil.php"><i class="fas fa-user fa-sm fa-fw me-2 text-gray-400"></i>&nbsp;Profile</a><a class="dropdown-item" href="#"><i class="fas fa-cogs fa-sm fa-fw me-2 text-gray-400"></i>&nbsp;Settings</a><a class="dropdown-item" href="#"><i class="fas fa-list fa-sm fa-fw me-2 text-gray-400"></i>&nbsp;Activity log</a>
                                 <div class="dropdown-divider"></div><a class="dropdown-item" href="#"><i class="fas fa-sign-out-alt fa-sm fa-fw me-2 text-gray-400"></i>&nbsp;Logout</a>
                             </div>
                         </div>

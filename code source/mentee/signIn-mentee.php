@@ -58,7 +58,7 @@
                                     </div>
                                     <div class="form-group">
                                         <label for="Password">Password</label>
-                                        <input type="password" class="form-control" id="Password" name="Password" />
+                                        <input type="password" class="form-control" required id="Password" name="Password" />
                                         <small>Error message</small>
                                     </div>
                                     <button type="submit" class="btn btn-theme" value="Register">Sign In</button>

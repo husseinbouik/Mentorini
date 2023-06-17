@@ -20,7 +20,7 @@
 
 <body>
     <nav class="navbar navbar-light navbar-expand-md fixed-top" style="padding-top: 0px;padding-bottom: 0px;background-color: var(--bs-gray-200);">
-        <div class="container"><a class="navbar-brand d-flex align-items-center" href="homepage.html">
+        <div class="container"><a class="navbar-brand d-flex align-items-center" href="homepage.php">
                 <div class="d-flex" style="margin-left: 26px;"><span data-aos="fade-right" data-aos-duration="1000" style="margin-left: -32px;"><img src="assets/img/icons8-dumbbell-50%201.svg" width="48" height="97"><span style="font-family: 'Vidaloka';margin-left: 8px;">MENTORINI</span></span></div>
             </a><button class="navbar-toggler" data-bs-toggle="collapse"><span class="visually-hidden">Toggle navigation</span><span class="navbar-toggler-icon"></span></button></div>
     </nav>
@@ -374,7 +374,7 @@
             </div>
         </div>
     </div>
-    <div class="text-end mb-3"><a href="table.html"><button class="btn btn-primary btn-lg" type="submit" style="margin-right: 53px;">NEXT</button></a></div>
+    <div class="text-end mb-3"><a href="table.php"><button class="btn btn-primary btn-lg" type="submit" style="margin-right: 53px;">NEXT</button></a></div>
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
     <script src="assets/js/aos.min.js"></script>
     <script src="assets/js/bs-init.js"></script>

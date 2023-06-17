@@ -54,32 +54,32 @@
 
                                     <div class="form-group">
                                         <label for="first_name">First Name</label>
-                                        <input type="text" class="form-control" id="firstname" name="first_name" />
+                                        <input type="text" class="form-control" id="firstname" name="first_name" required />
                                         <small>Error message</small>
                                     </div>
                                     <div class="form-group">
                                         <label for="last_name">Last Name</label>
-                                        <input type="text" class="form-control" id="lastname" name="last_name" />
+                                        <input type="text" class="form-control" id="lastname" name="last_name" required />
                                         <small>Error message</small>
                                     </div>
                                     <div class="form-group">
                                         <label for="ConfirmPassword">Profile picture: </label>
-                                        <input id="input-file-now-1" class="file_upload" type="file"/>
+                                        <input id="input-file-now-1" name="profile_picture" class="file_upload" type="file" required/>
                                         <small>Error message</small>
                                     </div>
                                     <div class="form-group">
                                         <label for="Email">Email address</label>
-                                        <input type="email" class="form-control" id="Email" name="Email" />
+                                        <input type="email" class="form-control" id="Email" name="Email" required />
                                         <small>Error message</small>
                                     </div>
                                     <div class="form-group">
                                         <label for="Password">Password</label>
-                                        <input type="password" class="form-control" id="Password" name="Password" />
+                                        <input type="password" class="form-control" id="Password" name="Password" required />
                                         <small>Error message</small>
                                     </div>
                                     <div class="form-group mb-5">
                                         <label for="ConfirmPassword">Confirm Password</label>
-                                        <input type="password" class="form-control" id="ConfirmPassword" name="ConfirmPassword" />
+                                        <input type="password" class="form-control" id="ConfirmPassword" name="ConfirmPassword" required />
                                         <small>Error message</small>
                                     </div>
 
