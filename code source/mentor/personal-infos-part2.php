@@ -815,12 +815,14 @@ foreach ($availability as $item) {
                                             data-bs-dismiss="modal">Close</button></div>
                                 </div>
                             </div>
-                        </div><a class="btn btn-danger btn-icon-split" role="button" data-bs-toggle="modal"
+                        </div>
+                                    <button class="btn btn-danger btn-icon-split" role="button" data-bs-toggle="modal"
                             data-bs-target="#exampleModalDeleteAvail<?php echo $availability_id ?>"><span class="text-white-50 icon"><i
-                                    class="fas fa-trash"></i></span><span class="text-white text">Delete</span></a>
+                                        class="fas fa-trash"></i></span><span class="text-white text">Delete</span>
+    </button>
+                        </div>
+                        <div class="mb-3"></div>
                     </div>
-                    <div class="mb-3"></div>
-                </div>
                 <?php } ?>
             </div>
         </div>
