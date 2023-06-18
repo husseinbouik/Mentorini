@@ -1,5 +1,5 @@
 <?php 
-session_name('mentor');
+session_name('mentee');
 session_start();
 include("connect.php");
 
@@ -7,7 +7,7 @@ include("connect.php");
 $first_name = $_POST['first_name'];
 $last_name = $_POST['last_name'];
 $email = $_POST['Email'];
-$password = $_POST['Password'];
+$password = $_POST['password'];
 $profile_picture = isset($_FILES['profile_picture']) ? $_FILES['profile_picture'] : null;
 $target_dir = "profil_pic/";
 $target_file = $target_dir . basename($_FILES["profile_picture"]["name"]);
