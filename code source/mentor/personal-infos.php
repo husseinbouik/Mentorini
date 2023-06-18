@@ -27,30 +27,31 @@
         <div class="d-sm-flex justify-content-between align-items-center mb-4">
             <h3 class="text-dark mb-0">Create Service</h3>
         </div>
-        <form>
+       
             <div class="card shadow mb-3">
                 <div class="card-header py-3">
                     <p class="text-primary m-0 fw-bold">Fill in the required fields *</p>
                 </div>
                 <div class="card-body">
-                    <form>
-                        <div class="mb-3"><label class="form-label" for="address"><strong>Title</strong></label><input class="form-control" type="text" id="address-1" placeholder="Mentorships Program Title" name="address">
+                    <form  action="add-personal-infos1.php" method="post" id="form" class="form" enctype="multipart/form-data">
+                        <div class="mb-3"><label class="form-label" for="address"><strong>Title</strong></label><input class="form-control" type="text" id="address-1" placeholder="Mentorships Program Title" name="address" required>
                             <div class="col">
-                                <div class="mb-3"><label class="form-label" for="city"><strong>session's image&nbsp;</strong></label><input class="form-control file_upload" type="file" id="input-file-now-1"></div>
-                                <div class="mb-3"><label class="form-label" for="city"><strong>Introdution</strong></label><textarea class="form-control" id="signature-5" rows="4" name="signature"></textarea></div>
-                                <div class="mb-3"><label class="form-label" for="city"><strong>About Me:</strong></label><textarea class="form-control" id="signature-2" rows="4" name="signature"></textarea></div>
-                                <div class="mb-3"><label class="form-label" for="city"><strong>Position:</strong></label><textarea class="form-control" id="signature-4" rows="4" name="signature"></textarea></div>
-                                <div class="mb-3"><label class="form-label" for="city"><strong>How It Works :</strong></label><textarea class="form-control" id="signature-3" rows="4" name="signature"></textarea></div>
-                                <div class="mb-3"><label class="form-label" for="city"><strong>Why Choose Me:</strong></label><textarea class="form-control" id="signature-6" rows="4" name="signature"></textarea></div>
-                                <div class="mb-3"><label class="form-label" for="city"><strong>What You Will Learn:</strong></label><textarea class="form-control text" id="signature-7" rows="4" name="signature"></textarea></div>
+                                <div class="mb-3"><label class="form-label" for="city"><strong>session's image&nbsp;</strong></label><input class="form-control file_upload" type="file" id="input-file-now-1" name="session_image" required></div>
+                                <div class="mb-3"><label class="form-label" for="city"><strong>Introdution</strong></label><textarea class="form-control" id="signature-5" rows="4" name="signature-5" required></textarea></div>
+                                <div class="mb-3"><label class="form-label" for="city"><strong>About Me:</strong></label><textarea class="form-control" id="signature-2" rows="4" name="signature-2" required></textarea></div>
+                                <div class="mb-3"><label class="form-label" for="city"><strong>Position:</strong></label><textarea class="form-control" id="signature-4" rows="4" name="signature-4" required></textarea></div>
+                                <div class="mb-3"><label class="form-label" for="city"><strong>How It Works :</strong></label><textarea class="form-control" id="signature-3" rows="4" name="signature-3" required></textarea></div>
+                                <div class="mb-3"><label class="form-label" for="city"><strong>Why Choose Me:</strong></label><textarea class="form-control" id="signature-6" rows="4" name="signature-6" required></textarea></div>
+                                <div class="mb-3"><label class="form-label" for="city"><strong>What You Will Learn:</strong></label><textarea class="form-control text" id="signature-7" rows="4" name="signature-7"  required></textarea></div>
                             </div>
                         </div>
-                        <div class="text-end mb-3" href=""><button class="btn btn-primary btn-lg" type="submit">NEXT</button></div>
+                        <div class="text-end mb-3">
+          <button class="btn btn-primary btn-lg" type="submit">NEXT</button>
                     </form>
                     <div class="view file-upload" style="padding-bottom: 7px;padding-right: 4px;"></div>
                 </div>
             </div>
-        </form>
+        
     </div>
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
     <script src="assets/js/aos.min.js"></script>

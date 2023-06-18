@@ -1,5 +1,5 @@
 <?php 
-session_name('mentee');
+session_name('mentor');
 session_start();
 include("connect.php");
 
@@ -9,7 +9,7 @@ $last_name = $_POST['last_name'];
 $email = $_POST['Email'];
 $password = $_POST['password'];
 $profile_picture = isset($_FILES['profile_picture']) ? $_FILES['profile_picture'] : null;
-$target_dir = "profil_pic/";
+$target_dir = "profil_pic_mentor/";
 $target_file = $target_dir . basename($_FILES["profile_picture"]["name"]);
 $uploadOk = 1;
 $imageFileType = strtolower(pathinfo($target_file, PATHINFO_EXTENSION));
@@ -44,7 +44,7 @@ if ($uploadOk == 0) {
         // Hash the password
         $hashed_password = password_hash($password, PASSWORD_DEFAULT);
 
-        $sql = "INSERT INTO Mentee (first_name, last_name, email, password, image_path) VALUES (:first_name, :last_name, :email, :password, :image_path)";
+        $sql = "INSERT INTO Mentor (first_name, last_name, email, password, image_path) VALUES (:first_name, :last_name, :email, :password, :image_path)";
         $stmt = $db->prepare($sql);
         $stmt->bindParam(':first_name', $first_name);
         $stmt->bindParam(':last_name', $last_name);
@@ -58,7 +58,7 @@ if ($uploadOk == 0) {
         } else {
             $message = 'Something went wrong. Please try again.';
             $_SESSION['message'] = $message;
-            header("Location: signUp.php");
+            header("Location: signUp-mentor.php");
         }
     } else {
         echo "Sorry, there was an error uploading your file.";
@@ -66,5 +66,5 @@ if ($uploadOk == 0) {
 }
 
 // Redirect the user to the homepage
-header("Location: signIn-mentee.php");
+header("Location: signIn-mentor.php");
 ?>

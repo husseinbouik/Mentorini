@@ -29,12 +29,12 @@
                         <div class="text-center">
                             <h4 class="text-dark mb-4">Create an Account!</h4>
                         </div>
-                        <form  action="mentor-register.php" method="post" id="form" class="form user">
+                        <form  action="mentor-register.php" method="post" id="form" class="form user" enctype="multipart/form-data">
                             <div class="row mb-3">
                                 <div class="col-sm-6 mb-3 mb-sm-0"><input class="form-control form-control-user" type="text" id="exampleFirstName-1" placeholder="First Name" name="first_name" required></div>
                                 <div class="col-sm-6"><input class="form-control form-control-user" type="text" id="exampleFirstName-2" placeholder="Last Name" name="last_name" required></div>
-                            </div><label class="form-label">Profil picture&nbsp;</label><input class="form-control file_upload" type="file" id="input-file-now-1">
-                            <div class="mb-3"><input class="form-control form-control-user" type="email" id="exampleInputEmail" aria-describedby="emailHelp" placeholder="Email Address" name="email" required></div>
+                            </div><label class="form-label">Profil picture&nbsp;</label><input class="form-control file_upload" type="file" id="input-file-now-1" name="profile_picture">
+                            <div class="mb-3"><input class="form-control form-control-user" type="email" id="exampleInputEmail" aria-describedby="emailHelp" placeholder="Email Address" name="Email" required></div>
                             <div class="row mb-3">
                                 <div class="col-sm-6 mb-3 mb-sm-0"><input class="form-control form-control-user" type="password" id="examplePasswordInput" placeholder="Password" name="password" required></div>
                                 <div class="col-sm-6"><input class="form-control form-control-user" type="password" id="exampleRepeatPasswordInput" placeholder="Repeat Password" name="password_repeat" required></div>

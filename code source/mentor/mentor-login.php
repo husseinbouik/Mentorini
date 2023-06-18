@@ -4,30 +4,30 @@ session_start();
 
 include "connect.php";
 
-$email = $_POST['Email'];
-$password = $_POST['Password'];
+$email = $_POST['email'];
+$password = $_POST['password'];
 
-$sql = "SELECT * FROM mentee WHERE email = :email";
+$sql = "SELECT * FROM mentor WHERE email = :email";
 $stmt = $db->prepare($sql);
 $stmt->bindParam(':email', $email);
 $stmt->execute();
 
-$mentee = $stmt->fetch(PDO::FETCH_ASSOC);
-if ($mentee) {
-    if (password_verify($password, $mentee['password'])) {
-        $_SESSION['mentee_id'] = $mentee['mentee_id'];
-        $_SESSION['first_name'] = $mentee['first_name'];
-        $_SESSION['last_name'] = $mentee['last_name'];
-        $_SESSION['email'] = $mentee['email'];
-        $_SESSION['image_path'] = $mentee['image_path'];
+$mentor = $stmt->fetch(PDO::FETCH_ASSOC);
+if ($mentor) {
+    if (password_verify($password, $mentor['password'])) {
+        $_SESSION['mentor_id'] = $mentor['mentor_id'];
+        $_SESSION['first_name'] = $mentor['first_name'];
+        $_SESSION['last_name'] = $mentor['last_name'];
+        $_SESSION['email'] = $mentor['email'];
+        $_SESSION['image_path'] = $mentor['image_path'];
 
-        header("Location: homepage.php");
+        header("Location: personal-infos.php");
         exit;
     } else {
         $_SESSION['error'] = "Invalid username or password";
-        header("Location: homepage.php");
+        header("Location: signIn-mentor.php");
     }
 } else {
     $_SESSION['error'] = "Invalid username or password";
-    header("Location: homepage.php");
+    header("Location: signIn-mentor.php");
 }
