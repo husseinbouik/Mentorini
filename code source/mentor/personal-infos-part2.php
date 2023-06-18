@@ -562,7 +562,7 @@
                                               
                                                 <p>Are you sure you want to delete this&nbsp; ?</p>
                                             </div>
-                                              <form action="delete-experiences.php?experience_id=2" method="post" id="form" class="form" enctype="multipart/form-data"> 
+                                              <form action="delete-experiences.php?experience_id=<?php echo $experience_id ?>" method="post" id="form" class="form" enctype="multipart/form-data"> 
                                             <div class="modal-footer"><button type="submit" class="btn btn-danger btn-icon-split">
   <span class="text-white-50 icon"><i class="fas fa-trash"></i></span>
   <span class="text-white text">Delete</span>
@@ -595,52 +595,59 @@
                                     aria-label="Close" data-bs-dismiss="modal"></button>
                             </div>
                             <div class="modal-body">
-                                <form>
+                                <form action="add-availability.php" method="post" id="form" class="form"
+                                                    enctype="multipart/form-data">
                                     <div class="mb-3"><label class="form-label" for="signature"><strong>Session
                                                 times</strong></label></div>
-                                    <div><input class="form-control mb-2 d-inline" id="myTime" type="time"
+                                    <div><input class="form-control mb-2 d-inline" name="startTime" id="myTime" type="time"
                                             onchange="onTimeChange()" style="width: 25%;">
                                         <p class="d-inline mx-2">Start time:&nbsp;<span id="displayTime">--:-- --</span>
                                         </p>
                                     </div>
-                                    <div><input class="form-control mb-2 d-inline" id="myTime-1" type="time"
+                                    <div><input class="form-control mb-2 d-inline" id="myTime-1" name="endTime" type="time"
                                             onchange="onTimeChange1()" style="width: 25%;">
                                         <p class="d-inline mx-2">End time:&nbsp;<span id="displayTime-1">--:-- --</span>
                                         </p>
                                     </div>
                                     <div class="d-flex flex-wrap gap-3">
-                                        <div>
-                                            <div class="form-check form-switch"><input class="form-check-input"
-                                                    type="checkbox" id="formCheck-2"><label class="form-check-label"
-                                                    for="formCheck-2"><strong>Monday</strong></label></div>
-                                        </div>
-                                        <div>
-                                            <div class="form-check form-switch"><input class="form-check-input"
-                                                    type="checkbox" id="formCheck-3"><label class="form-check-label"
-                                                    for="formCheck-3"><strong>Tuesday</strong></label></div>
-                                        </div>
-                                        <div>
-                                            <div class="form-check form-switch"><input class="form-check-input"
-                                                    type="checkbox" id="formCheck-7"><label class="form-check-label"
-                                                    for="formCheck-7"><strong>Wednesday</strong></label></div>
-                                        </div>
-                                        <div>
-                                            <div class="form-check form-switch"><input class="form-check-input"
-                                                    type="checkbox" id="formCheck-6"><label class="form-check-label"
-                                                    for="formCheck-6"><strong>Thursday</strong></label></div>
-                                        </div>
-                                        <div>
-                                            <div class="form-check form-switch"><input class="form-check-input"
-                                                    type="checkbox" id="formCheck-5"><label class="form-check-label"
-                                                    for="formCheck-5"><strong>Friday</strong></label></div>
-                                        </div>
-                                        <div>
-                                            <div class="form-check form-switch"><input class="form-check-input"
-                                                    type="checkbox" id="formCheck-4"><label class="form-check-label"
-                                                    for="formCheck-4"><strong>Saturday</strong></label></div>
-                                        </div>
-                                    </div>
-                                    <div class="modal-footer"><button class="btn btn-warning" type="button">Add<svg
+    <div>
+        <div class="form-check">
+            <input class="form-check-input" name="days" type="radio" id="formCheck-2" value="Monday">
+            <label class="form-check-label" for="formCheck-2"><strong>Monday</strong></label>
+        </div>
+    </div>
+    <div>
+        <div class="form-check">
+            <input class="form-check-input" name="days" type="radio" id="formCheck-3" value="Tuesday">
+            <label class="form-check-label" for="formCheck-3"><strong>Tuesday</strong></label>
+        </div>
+    </div>
+    <div>
+        <div class="form-check">
+            <input class="form-check-input" name="days" type="radio" id="formCheck-7" value="Wednesday">
+            <label class="form-check-label" for="formCheck-7"><strong>Wednesday</strong></label>
+        </div>
+    </div>
+    <div>
+        <div class="form-check">
+            <input class="form-check-input" name="days" type="radio" id="formCheck-6" value="Thursday">
+            <label class="form-check-label" for="formCheck-6"><strong>Thursday</strong></label>
+        </div>
+    </div>
+    <div>
+        <div class="form-check">
+            <input class="form-check-input" name="days" type="radio" id="formCheck-5" value="Friday">
+            <label class="form-check-label" for="formCheck-5"><strong>Friday</strong></label>
+        </div>
+    </div>
+    <div>
+        <div class="form-check">
+            <input class="form-check-input" name="days" type="radio" id="formCheck-4" value="Saturday">
+            <label class="form-check-label" for="formCheck-4"><strong>Saturday</strong></label>
+        </div>
+    </div>
+</div>
+                                    <div class="modal-footer"><button class="btn btn-warning" type="submit">Add<svg
                                                 xmlns="http://www.w3.org/2000/svg" width="1em" height="1em"
                                                 fill="currentColor" viewBox="0 0 16 16" class="bi bi-plus-square-dotted"
                                                 style="font-size: 20px;margin-left: 9px;">
@@ -664,20 +671,54 @@
                     </svg>&nbsp;</button>
             </div>
             <div class="row">
+<?php
+// Get the mentor's ID
+$mentor_id = $_SESSION['mentor_id'];
+
+// Prepare the SQL statement
+$sql = 'SELECT * FROM Availability WHERE mentor_id = :mentor_id';
+
+// Execute the SQL statement
+$stmt = $db->prepare($sql);
+$stmt->bindValue(':mentor_id', $mentor_id, PDO::PARAM_INT);
+$stmt->execute();
+
+// Get the results of the query
+$results = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+// Get the availability data from the database
+$availability = $results;
+
+// Loop through the availability and display them
+foreach ($availability as $item) {
+
+    // Get the availability ID
+    $availability_id = $item['availability_id'];
+
+    // Get the availability days
+    $availability_days = $item['availability_days'];
+
+    // Get the start time of the availability
+    $start_time = $item['start_time'];
+
+    // Get the end time of the availability
+    $end_time = $item['end_time'];
+?>
+
                 <div class="col-md-6">
                     <div class="mb-3"><label class="form-label" for="signature"><strong>Session times</strong></label>
                     </div>
-                    <h6 class="fs-6" style="text-align: justify;">Monday,thursday, Friday : 1:30 pm&nbsp;<svg
+                    <h6 class="fs-6" style="text-align: justify;"><?php echo $availability_days ?>: <?php echo $start_time ?>&nbsp;<svg
                             xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor"
                             viewBox="0 0 16 16" class="bi bi-clock">
                             <path
                                 d="M8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71V3.5z">
                             </path>
                             <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm7-8A7 7 0 1 1 1 8a7 7 0 0 1 14 0z"></path>
-                        </svg>&nbsp;4:00 pm</h6>
+                        </svg>&nbsp;<?php echo $end_time ?></h6>
                     <div class="mb-3"></div>
                     <div id="modal-open-7">
-                        <div class="modal fade" role="dialog" tabindex="-1" id="exampleModaldate-1"
+                        <div class="modal fade" role="dialog" tabindex="-1" id="exampleModaldateAvail<?php echo $availability_id ?>"
                             aria-labelledby="exampleModalLabel">
                             <div class="modal-dialog" role="document">
                                 <div class="modal-content">
@@ -699,44 +740,44 @@
                                                 <p class="d-inline mx-2">End time:&nbsp;<span id="displayTime-4">--:--
                                                         --</span></p>
                                             </div>
-                                            <div class="d-flex flex-wrap gap-3">
-                                                <div>
-                                                    <div class="form-check form-switch"><input class="form-check-input"
-                                                            type="checkbox" id="formCheck-1"><label
-                                                            class="form-check-label"
-                                                            for="formCheck-1"><strong>Monday</strong></label></div>
-                                                </div>
-                                                <div>
-                                                    <div class="form-check form-switch"><input class="form-check-input"
-                                                            type="checkbox" id="formCheck-8"><label
-                                                            class="form-check-label"
-                                                            for="formCheck-8"><strong>Tuesday</strong></label></div>
-                                                </div>
-                                                <div>
-                                                    <div class="form-check form-switch"><input class="form-check-input"
-                                                            type="checkbox" id="formCheck-9"><label
-                                                            class="form-check-label"
-                                                            for="formCheck-9"><strong>Wednesday</strong></label></div>
-                                                </div>
-                                                <div>
-                                                    <div class="form-check form-switch"><input class="form-check-input"
-                                                            type="checkbox" id="formCheck-10"><label
-                                                            class="form-check-label"
-                                                            for="formCheck-10"><strong>Thursday</strong></label></div>
-                                                </div>
-                                                <div>
-                                                    <div class="form-check form-switch"><input class="form-check-input"
-                                                            type="checkbox" id="formCheck-11"><label
-                                                            class="form-check-label"
-                                                            for="formCheck-11"><strong>Friday</strong></label></div>
-                                                </div>
-                                                <div>
-                                                    <div class="form-check form-switch"><input class="form-check-input"
-                                                            type="checkbox" id="formCheck-12"><label
-                                                            class="form-check-label"
-                                                            for="formCheck-12"><strong>Saturday</strong></label></div>
-                                                </div>
-                                            </div>
+                                           <div class="d-flex flex-wrap gap-3">
+    <div>
+        <div class="form-check">
+            <input class="form-check-input" name="days" type="radio" id="formCheck-2" value="Monday">
+            <label class="form-check-label" for="formCheck-2"><strong>Monday</strong></label>
+        </div>
+    </div>
+    <div>
+        <div class="form-check">
+            <input class="form-check-input" name="days" type="radio" id="formCheck-3" value="Tuesday">
+            <label class="form-check-label" for="formCheck-3"><strong>Tuesday</strong></label>
+        </div>
+    </div>
+    <div>
+        <div class="form-check">
+            <input class="form-check-input" name="days" type="radio" id="formCheck-7" value="Wednesday">
+            <label class="form-check-label" for="formCheck-7"><strong>Wednesday</strong></label>
+        </div>
+    </div>
+    <div>
+        <div class="form-check">
+            <input class="form-check-input" name="days" type="radio" id="formCheck-6" value="Thursday">
+            <label class="form-check-label" for="formCheck-6"><strong>Thursday</strong></label>
+        </div>
+    </div>
+    <div>
+        <div class="form-check">
+            <input class="form-check-input" name="days" type="radio" id="formCheck-5" value="Friday">
+            <label class="form-check-label" for="formCheck-5"><strong>Friday</strong></label>
+        </div>
+    </div>
+    <div>
+        <div class="form-check">
+            <input class="form-check-input" name="days" type="radio" id="formCheck-4" value="Saturday">
+            <label class="form-check-label" for="formCheck-4"><strong>Saturday</strong></label>
+        </div>
+    </div>
+</div>
                                             <div class="modal-footer"><button class="btn btn-warning"
                                                     type="button">Edit<svg xmlns="http://www.w3.org/2000/svg"
                                                         width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16"
@@ -753,9 +794,9 @@
                                 </div>
                             </div>
                         </div><button class="btn btn-warning" type="button" data-bs-toggle="modal"
-                            data-bs-target="#exampleModaldate-1" style="margin-right: 152px;">&nbsp;<i
+                            data-bs-target="#exampleModaldateAvail<?php echo $availability_id ?>" style="margin-right: 152px;">&nbsp;<i
                                 class="far fa-edit" style="font-size: 17px;"></i></button>
-                        <div class="modal fade" role="dialog" tabindex="-1" id="exampleModalDelete-4"
+                        <div class="modal fade" role="dialog" tabindex="-1" id="exampleModalDeleteAvail<?php echo $availability_id ?>"
                             aria-labelledby="exampleModalLabel">
                             <div class="modal-dialog" role="document">
                                 <div class="modal-content">
@@ -767,7 +808,7 @@
                                         <p>Are you sure you want to delete this&nbsp; ?</p>
                                     </div>
                                     <div class="modal-footer"><a class="btn btn-danger btn-icon-split" role="button"
-                                            data-bs-toggle="modal" data-bs-target="#exampleModalDelete"><span
+                                            data-bs-toggle="modal" data-bs-target="#exampleModalDeleteAvail<?php echo $availability_id ?>"><span
                                                 class="text-white-50 icon"><i class="fas fa-trash"></i></span><span
                                                 class="text-white text">Delete</span></a><button class="btn btn-warning"
                                             style="background-color: rgb(255,139,160);" type="button"
@@ -775,11 +816,12 @@
                                 </div>
                             </div>
                         </div><a class="btn btn-danger btn-icon-split" role="button" data-bs-toggle="modal"
-                            data-bs-target="#exampleModalDelete"><span class="text-white-50 icon"><i
+                            data-bs-target="#exampleModalDeleteAvail<?php echo $availability_id ?>"><span class="text-white-50 icon"><i
                                     class="fas fa-trash"></i></span><span class="text-white text">Delete</span></a>
                     </div>
                     <div class="mb-3"></div>
                 </div>
+                <?php } ?>
             </div>
         </div>
     </div>
