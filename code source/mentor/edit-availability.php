@@ -4,22 +4,24 @@ session_start();
 include("connect.php");
 // Connect to the database
 // Get the mentor ID from the URL
-$mentorId = $_GET['mentorId'];
+$mentorId = $_SESSION['mentor_id'];
 
 // Get the start time and end time from the form
-$startTime = $_POST['startTime'];
-$endTime = $_POST['endTime'];
+$startTime = $_POST['start_time'];
+$endTime = $_POST['end_time'];
 
 // Get the days of the week that the mentor is available
-$days = $_POST['days'];
+$days = explode(',', $_POST['days']);
 
 // Update the availability infos in the database
-$sql = 'UPDATE availability SET startTime = ?, endTime = ?, days = ? WHERE mentorId = ?';
+$sql = 'UPDATE availability SET start_time = ?, end_time = ?, availability_days = ? WHERE mentor_id = ?';
 $stmt = $db->prepare($sql);
-$stmt->execute([$startTime, $endTime, getDays($days), $mentorId]);
+$stmt->execute([$startTime, $endTime, join(',', $days), $mentorId]);
 
 // Display a success message
 echo 'Availability infos successfully updated!';
+
+header("Location: personal-infos-part2.php");
 
 // Close the database connection
 $db = null;
