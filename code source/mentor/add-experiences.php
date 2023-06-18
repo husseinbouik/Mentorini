@@ -9,12 +9,12 @@ $mentor_id = $_SESSION['mentor_id'];
 // get form data
 $title = $_POST['title'];
 $description = $_POST['description'];
-$start_date = $_POST['start_date'];
-$end_date = $_POST['end_date'];
+$start_year = $_POST['start_year'];
+$end_year = $_POST['end_year'];
 $link = $_POST['link'];
 
 // handle file upload
-$target_dir = "credentials_uploads/";
+$target_dir = "experiences_uploads/";
 $target_file = $target_dir . basename($_FILES["file"]["name"]);
 
 // generate unique filename based on current timestamp
@@ -25,20 +25,20 @@ $new_target_file = $target_dir . $new_file_name; // set new target file path wit
 
 move_uploaded_file($_FILES["file"]["tmp_name"], $new_target_file);
 $file_path = $new_target_file;
-// prepare and execute SQL statement to insert data into credentials table
-$sql = "INSERT INTO Credentials (mentor_id, title, description, start_date, end_date, file_path, link)
-        VALUES (:mentor_id, :title, :description, :start_date, :end_date, :file_path, :link)";
+// prepare and execute SQL statement to insert data into experiences table
+$sql = "INSERT INTO Experiences (mentor_id, title, description, start_year, end_year, file_path, link)
+        VALUES (:mentor_id, :title, :description, :start_year, :end_year, :file_path, :link)";
 $stmt = $db->prepare($sql);
 $stmt->bindParam(':mentor_id', $mentor_id);
 $stmt->bindParam(':title', $title);
 $stmt->bindParam(':description', $description);
-$stmt->bindParam(':start_date', $start_date);
-$stmt->bindParam(':end_date', $end_date);
+$stmt->bindParam(':start_year', $start_year);
+$stmt->bindParam(':end_year', $end_year);
 $stmt->bindParam(':file_path', $file_path);
 $stmt->bindParam(':link', $link);
 
 if ($stmt->execute()) {
-    echo "Credential added successfully.";
+    echo "Experience added successfully.";
     // Redirect the user to the home page
     header("Location:personal-infos-part2.php");
 } else {
