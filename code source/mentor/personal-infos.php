@@ -34,15 +34,15 @@
                 </div>
                 <div class="card-body">
                     <form  action="add-personal-infos1.php" method="post" id="form" class="form" enctype="multipart/form-data">
-                        <div class="mb-3"><label class="form-label" for="address"><strong>Title</strong></label><input class="form-control" type="text" id="address-1" placeholder="Mentorships Program Title" name="address" required>
+                        <div class="mb-3"><label class="form-label" for="address"><strong>Title</strong></label><input class="form-control" type="text" id="address-1" placeholder="Mentorships Program Title" name="title" required>
                             <div class="col">
                                 <div class="mb-3"><label class="form-label" for="city"><strong>session's image&nbsp;</strong></label><input class="form-control file_upload" type="file" id="input-file-now-1" name="session_image" required></div>
-                                <div class="mb-3"><label class="form-label" for="city"><strong>Introdution</strong></label><textarea class="form-control" id="signature-5" rows="4" name="signature-5" required></textarea></div>
-                                <div class="mb-3"><label class="form-label" for="city"><strong>About Me:</strong></label><textarea class="form-control" id="signature-2" rows="4" name="signature-2" required></textarea></div>
-                                <div class="mb-3"><label class="form-label" for="city"><strong>Position:</strong></label><textarea class="form-control" id="signature-4" rows="4" name="signature-4" required></textarea></div>
-                                <div class="mb-3"><label class="form-label" for="city"><strong>How It Works :</strong></label><textarea class="form-control" id="signature-3" rows="4" name="signature-3" required></textarea></div>
-                                <div class="mb-3"><label class="form-label" for="city"><strong>Why Choose Me:</strong></label><textarea class="form-control" id="signature-6" rows="4" name="signature-6" required></textarea></div>
-                                <div class="mb-3"><label class="form-label" for="city"><strong>What You Will Learn:</strong></label><textarea class="form-control text" id="signature-7" rows="4" name="signature-7"  required></textarea></div>
+                                <div class="mb-3"><label class="form-label" for="city"><strong>Introdution</strong></label><textarea class="form-control" id="signature-5" rows="4" name="introduction" required></textarea></div>
+                                <div class="mb-3"><label class="form-label" for="city"><strong>About Me:</strong></label><textarea class="form-control" id="signature-2" rows="4" name="about_me" required></textarea></div>
+                                <div class="mb-3"><label class="form-label" for="city"><strong>Position:</strong></label><textarea class="form-control" id="signature-4" rows="4" name="position" required></textarea></div>
+                                <div class="mb-3"><label class="form-label" for="city"><strong>How It Works :</strong></label><textarea class="form-control" id="signature-3" rows="4" name="how_it_works" required></textarea></div>
+                                <div class="mb-3"><label class="form-label" for="city"><strong>Why Choose Me:</strong></label><textarea class="form-control" id="signature-6" rows="4" name="why_choose_me" required></textarea></div>
+                                <div class="mb-3"><label class="form-label" for="city"><strong>What You Will Learn:</strong></label><textarea class="form-control text" id="signature-7" rows="4" name="what_you_will_learn"  required></textarea></div>
                             </div>
                         </div>
                         <div class="text-end mb-3">
