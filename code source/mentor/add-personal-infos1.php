@@ -38,7 +38,7 @@ if ($uploadOk == 0) {
     if (move_uploaded_file($_FILES["session_image"]["tmp_name"], $target_file)) {
         $timestamp = time();
         $random_number = rand(1, 10000);
-        $session_image_name = "session_image" . $timestamp . $random_number . "." . $imageFileType;
+        $session_image_name = $target_dir . "session_image" . $timestamp . $random_number . "." . $imageFileType;
         $session_image_path = $target_dir . $session_image_name;
 
         // Rename the uploaded picture

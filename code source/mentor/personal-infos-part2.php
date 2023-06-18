@@ -39,35 +39,43 @@
                     <div class="modal-dialog" role="document">
                         <div class="modal-content">
                             <div class="modal-header">
-                                <h4>Modal Title</h4><button class="btn-close" type="button" aria-label="Close" data-bs-dismiss="modal"></button>
+                                <h4>add a credential</h4><button class="btn-close" type="button" aria-label="Close" data-bs-dismiss="modal"></button>
                             </div>
                             <div class="modal-body">
-                                <form>
-                                    <div class="mb-3"></div>
-                                    <div class="d-flex flex-row gap-5">
-                                        <div class="mb-3"><label class="form-label" for="address"><strong>Credential</strong></label><input class="form-control" type="text" id="address-10" placeholder="" name="date"></div>
-                                        <div class="mb-3"><label class="form-label" for="address"><strong>Start-date</strong></label><input class="form-control" type="text" id="address-11" placeholder="" name="date"></div>
-                                        <div class="mb-3"><label class="form-label" for="address"><strong>end-date</strong></label><input class="form-control" type="text" id="address-12" placeholder="" name="address"></div>
-                                    </div>
-                                    <div class="mb-3">
-                                        <div class="mb-3"><label class="form-label" for="address"><strong>Link (Optional):</strong></label><input class="form-control" type="text" id="address-13" placeholder="" name="date"></div><label class="form-label" for="city"><strong>Description:</strong></label><textarea class="form-control" id="signature-9" rows="4" name="signature"></textarea>
-                                    </div>
-                                    <section>
-                                        <div class="container-fluid">
-                                            <div class="row">
-                                                <div class="col"><label class="col-form-label" for="city"><strong>credential file:</strong></label></div>
-                                                <div class="col-sm-12 col-md-8 col-lg-8 offset-sm-0 offset-md-2">
-                                                    <div class="file-upload-wrapper">
-                                                        <div class="view file-upload" style="padding-bottom: 7px;padding-right: 4px;"><input class="form-control file_upload" type="file" id="input-file-now-2"></div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </section>
-                                    <div class="modal-footer" style="padding-left: 0px;">
-                                        <div class="mb-3" style="padding-left: 0px;"><button class="btn btn-primary btn-sm ment-btn-style" type="submit" style="margin-right: 248px;">Add a credential</button><button class="btn btn-warning" style="background-color: rgb(255,139,160);" type="button" data-bs-dismiss="modal">Close</button></div>
-                                    </div>
-                                </form>
+                        <form action="add-credentials.php" method="post" id="form" class="form" enctype="multipart/form-data">
+    <div class="mb-3">
+        <label class="form-label" for="title"><strong>Credential Title:</strong></label>
+        <input class="form-control" type="text" id="title" placeholder="" name="title" required>
+    </div>
+    <div class="d-flex flex-row gap-5">
+        <div class="mb-3">
+            <label class="form-label" for="start_date"><strong>Start Date:</strong></label>
+            <input class="form-control" type="date" id="start_date" placeholder="" name="start_date" required>
+        </div>
+        <div class="mb-3">
+            <label class="form-label" for="end_date"><strong>End Date:</strong></label>
+            <input class="form-control" type="date" id="end_date" placeholder="" name="end_date" required>
+        </div>
+    </div>
+    <div class="mb-3">
+        <label class="form-label" for="link"><strong>Link (Optional):</strong></label>
+        <input class="form-control" type="text" id="link" placeholder="" name="link">
+    </div>
+    <div class="mb-3">
+        <label class="form-label" for="description"><strong>Description:</strong></label>
+        <textarea class="form-control" id="description" rows="4" name="description" required></textarea>
+    </div>
+    <div class="mb-3">
+        <label class="form-label" for="file"><strong>Credential File:</strong></label>
+        <input class="form-control file_upload" type="file" id="file" name="file" required>
+    </div>
+    <div class="modal-footer" style="padding-left: 0px;">
+        <div class="mb-3" style="padding-left: 0px;">
+            <button class="btn btn-primary btn-sm ment-btn-style" type="submit" style="margin-right: 248px;">Add a credential</button>
+            <button class="btn btn-warning" style="background-color: rgb(255,139,160);" type="button" data-bs-dismiss="modal">Close</button>
+        </div>
+    </div>
+</form>
                             </div>
                         </div>
                     </div>
@@ -92,12 +100,12 @@
                                         <h4>Modal Title</h4><button class="btn-close" type="button" aria-label="Close" data-bs-dismiss="modal"></button>
                                     </div>
                                     <div class="modal-body">
-                                        <form>
+                                        <form  action="add-credentials.php" method="post" id="form" class="form" enctype="multipart/form-data">
                                             <div class="mb-3"></div>
                                             <div class="d-flex flex-row gap-5">
                                                 <div class="mb-3"><label class="form-label" for="address"><strong>Credential</strong></label><input class="form-control" type="text" id="address-3" placeholder="" name="date"></div>
-                                                <div class="mb-3"><label class="form-label" for="address"><strong>Start-date</strong></label><input class="form-control" type="text" id="address-5" placeholder="" name="date"></div>
-                                                <div class="mb-3"><label class="form-label" for="address"><strong>end-date</strong></label><input class="form-control" type="text" id="address-2" placeholder="" name="address"></div>
+                                                <div class="mb-3"><label class="form-label" for="address"><strong>Start-date</strong></label><input class="form-control" type="date" id="address-5" placeholder="" name="date"></div>
+                                                <div class="mb-3"><label class="form-label" for="address"><strong>end-date</strong></label><input class="form-control" type="date" id="address-2" placeholder="" name="address"></div>
                                             </div>
                                             <div class="mb-3">
                                                 <div class="mb-3"><label class="form-label" for="address"><strong>Link (Optional):</strong></label><input class="form-control" type="text" id="address-4" placeholder="" name="date"></div><label class="form-label" for="city"><strong>Description:</strong></label><textarea class="form-control" id="signature-5" rows="4" name="signature"></textarea>

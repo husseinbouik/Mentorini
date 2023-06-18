@@ -50,7 +50,7 @@ if ($uploadOk == 0) {
         $stmt->bindParam(':last_name', $last_name);
         $stmt->bindParam(':email', $email);
         $stmt->bindParam(':password', $hashed_password);
-        $stmt->bindParam(':image_path', $profile_picture_name);
+        $stmt->bindParam(':image_path', $profile_picture_path);
         $stmt->execute();
 
         if ($stmt) {
