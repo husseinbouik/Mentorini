@@ -20,6 +20,22 @@
 </head>
 
 <body id="page-top">
+    <?php
+    session_name('mentor');
+    session_start();
+    include "connect.php";
+    // $_SESSION['mentor_id'] 
+    // $_SESSION['first_name'] 
+    // $_SESSION['last_name']
+    // $_SESSION['email'] 
+    // $_SESSION['image_path']
+    $email = $_SESSION['email'];
+
+    $image_path = $_SESSION['image_path'];
+    $first_name = $_SESSION['first_name'];
+    $last_name = $_SESSION['last_name'];
+    $full_name = $first_name . ' ' . $last_name;
+    ?>
     <div id="wrapper">
         <nav class="navbar navbar-dark align-items-start sidebar sidebar-dark accordion bg-gradient-primary p-0 navbarstyle">
             <div class="container-fluid d-flex flex-column p-0"><a class="navbar-brand d-flex align-items-center" href="homepage.php">
@@ -126,7 +142,7 @@
                             </li>
                             <div class="d-none d-sm-block topbar-divider"></div>
                             <li class="nav-item dropdown no-arrow">
-                                <div class="nav-item dropdown no-arrow"><a class="dropdown-toggle nav-link" aria-expanded="false" data-bs-toggle="dropdown" href="#"><span class="d-none d-lg-inline me-2 text-gray-600 small">Valerie Luna</span><img class="border rounded-circle img-profile" src="assets/img/avatars/avatar5.jpeg"></a>
+                                <div class="nav-item dropdown no-arrow"><a class="dropdown-toggle nav-link" aria-expanded="false" data-bs-toggle="dropdown" href="#"><span class="d-none d-lg-inline me-2 text-gray-600 small"><?php echo $full_name; ?></span><img class="border rounded-circle img-profile" src="<?php echo $image_path; ?>"></a>
                                     <div class="dropdown-menu shadow dropdown-menu-end animated--grow-in"><a class="dropdown-item" href="profile.php"><i class="fas fa-user fa-sm fa-fw me-2 text-gray-400"></i>&nbsp;Profile</a><a class="dropdown-item" href="#"><i class="fas fa-cogs fa-sm fa-fw me-2 text-gray-400"></i>&nbsp;Settings</a><a class="dropdown-item" href="#"><i class="fas fa-list fa-sm fa-fw me-2 text-gray-400"></i>&nbsp;Activity log</a>
                                         <div class="dropdown-divider"></div><a class="dropdown-item" href="#"><i class="fas fa-sign-out-alt fa-sm fa-fw me-2 text-gray-400"></i>&nbsp;Logout</a>
                                     </div>
@@ -144,18 +160,18 @@
                                     <p class="text-primary m-0 fw-bold">User Settings</p>
                                 </div>
                                 <div class="card-body">
-                                    <form>
+                                    <form >
                                         <div class="row" style="margin-bottom: 25px;text-align: left;">
                                             <div class="col-md-6">
-                                                <div class="mb-3"><label class="form-label" for="first_name"><strong>First Name</strong></label><input class="form-control" type="text" placeholder="John" name="first_name" required=""></div>
+                                                <div class="mb-3"><label class="form-label" for="first_name"><strong>First Name</strong></label><input class="form-control" type="text" placeholder="John" name="first_name" required="" value="<?php echo $first_name; ?>"></div>
                                             </div>
                                             <div class="col-md-6">
-                                                <div class="mb-3"><label class="form-label" for="last_name"><strong>Last Name</strong></label><input class="form-control" type="text" placeholder="Doe" name="last_name" required=""></div>
+                                                <div class="mb-3"><label class="form-label" for="last_name"><strong>Last Name</strong></label><input class="form-control" type="text" placeholder="Doe" name="last_name" required=""  value="<?php echo $last_name; ?>"></div>
                                             </div>
                                             <div class="col-sm-8 col-md-8 col-lg-9 col-xl-10 col-xxl-10 align-self-center">
                                                 <div class="row">
                                                     <div class="col-md-12 text-start">
-                                                        <div class="mb-3"><label class="form-label" for="email"><strong>Email Address</strong></label><input class="form-control" type="email" id="email-1" placeholder="user@example.com" name="email" required=""></div>
+                                                        <div class="mb-3"><label class="form-label" for="email"><strong>Email Address</strong></label><input class="form-control" type="email" id="email-1" placeholder="user@example.com" name="email" required=""  value="<?php echo $email; ?>"></div>
                                                     </div>
                                                 </div>
                                             </div>
@@ -180,7 +196,7 @@
                         </div>
                         <div class="col-lg-4 col-xxl-4">
                             <div class="card mb-3">
-                                <div class="card-body text-center shadow"><img class="rounded-circle mb-3 mt-4" src="assets/img/dogs/image2.jpeg" width="160" height="160">
+                                <div class="card-body text-center shadow"><img class="rounded-circle mb-3 mt-4" src="<?php echo $image_path; ?>" width="160" height="160">
                                     <div class="mb-3">
                                         <div id="modal-open-8">
                                             <div class="modal fade" role="dialog" tabindex="-1" id="exampleModal" aria-labelledby="exampleModalLabel">
