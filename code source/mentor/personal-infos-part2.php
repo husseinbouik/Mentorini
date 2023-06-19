@@ -836,7 +836,7 @@ foreach ($availability as $item) {
             </div>
         </div>
     </div>
-    <div class="text-end mb-3"><a href="table.php"><button class="btn btn-primary btn-lg" type="submit"
+    <div class="text-end mb-3"><a href="profile.php"><button class="btn btn-primary btn-lg" type="submit"
                 style="margin-right: 53px;">NEXT</button></a></div>
                 <script>
 </script>

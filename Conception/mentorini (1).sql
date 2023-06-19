@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1
--- Généré le : dim. 18 juin 2023 à 10:48
+-- Généré le : lun. 19 juin 2023 à 10:14
 -- Version du serveur : 10.4.27-MariaDB
 -- Version de PHP : 8.2.0
 
@@ -35,6 +35,14 @@ CREATE TABLE `availability` (
   `end_time` time NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
+--
+-- Déchargement des données de la table `availability`
+--
+
+INSERT INTO `availability` (`availability_id`, `mentor_id`, `availability_days`, `start_time`, `end_time`) VALUES
+(4, 13, 'Wednesday', '19:53:00', '19:54:00'),
+(8, 13, 'Wednesday', '19:53:00', '19:54:00');
+
 -- --------------------------------------------------------
 
 --
@@ -57,7 +65,8 @@ CREATE TABLE `credentials` (
 --
 
 INSERT INTO `credentials` (`credential_id`, `mentor_id`, `title`, `description`, `start_date`, `end_date`, `file_path`, `link`) VALUES
-(2, 4, 'hussein', 'Placeat aut ut fugi', '1977-08-22', '1974-01-04', 'credentials_uploads/1687068338101.sql', 'Qui eos quia laudan');
+(7, 13, 'Pariatur Sunt rerum', 'Facilis tempor solut', '1975-10-11', '1980-06-22', 'credentials_uploads/1687104619371.jpg', 'Quia inventore quod '),
+(8, 13, 'Quisquam ut fuga Es', 'Omnis reiciendis dol', '1992-03-05', '1971-02-23', 'credentials_uploads/1687158215770.jpg', 'Consequuntur sit sin');
 
 -- --------------------------------------------------------
 
@@ -81,7 +90,7 @@ CREATE TABLE `experiences` (
 --
 
 INSERT INTO `experiences` (`experience_id`, `mentor_id`, `title`, `description`, `start_year`, `end_year`, `link`, `file_path`) VALUES
-(3, 4, '72 South First Drive', 'Aliquam sunt ea sin', '2000-08-03', '2009-12-22', '75 East White Hague Extension', 'experiences_uploads/1687075653158.lo1');
+(8, 13, '21 Old Drive', 'Repudiandae harum al', '2020-03-19', '2006-08-19', '221 Fabien Parkway', 'experiences_uploads/1687157854666.jpg');
 
 -- --------------------------------------------------------
 
@@ -128,7 +137,8 @@ CREATE TABLE `mentor` (
 --
 
 INSERT INTO `mentor` (`mentor_id`, `first_name`, `last_name`, `email`, `created_at`, `image_path`, `password`, `title`, `introduction`, `about_me`, `position`, `how_it_works`, `why_choose_me`, `what_you_will_learn`, `session_image_path`) VALUES
-(4, 'hussein', 'bouik', 'husseinbouik5@gmail.com', '2023-06-18 04:29:26', 'profil_pic_mentor/profile_image16870625668485.png', '$2y$10$HhXQ1NVDLMZENBp5.KsZ5u7a43/oKIVMTy4ysUMszuFrLbbwXVSVa', '320 West Nobel Court', 'Autem fuga Numquam ', 'Enim accusamus ratio', 'Adipisicing at eius ', 'Eveniet sunt illum', 'Elit sunt repellend', 'Inventore nemo quis ', 'session_images/session_image16870660261431.png');
+(13, 'hussein', 'Acton', 'husseinbouik5@gmail.com', '2023-06-18 14:21:30', 'profil_pic_mentor/profile_image16870980903860.jpg', '$2y$10$ZHKczkc.PmByu/AaTpQ7mOAgQIJokMqc4g1BitVsbekWBFoKMpE9O', 'hussein', 'Provident amet con', 'Dolorem voluptate ex', 'Enim enim ad laudant', 'Dolor eligendi nulla', 'Illo qui saepe rerum', 'Pariatur Doloremque', 'session_images/session_image16871557862268.jpg'),
+(16, 'Paloma', 'Alisa', 'miwok@mailinator.com', '2023-06-19 07:11:20', 'profil_pic_mentor/profile_image16871586796920.png', '$2y$10$hbsI4Fhdd2M5FQtjaX3jN.5bcZaCGgXO58THlBrrI3wtweBhKlr.e', '59 Second Road', 'Ratione quo illum n', 'Aut aut in minima ni', 'Ratione sed ea sit ', 'Nihil dolore qui por', 'Excepturi autem dign', 'Fuga Enim aliquam c', 'session_images/session_image16871587125835.jpg');
 
 -- --------------------------------------------------------
 
@@ -199,19 +209,19 @@ ALTER TABLE `sessions`
 -- AUTO_INCREMENT pour la table `availability`
 --
 ALTER TABLE `availability`
-  MODIFY `availability_id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `availability_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT pour la table `credentials`
 --
 ALTER TABLE `credentials`
-  MODIFY `credential_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `credential_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT pour la table `experiences`
 --
 ALTER TABLE `experiences`
-  MODIFY `experience_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `experience_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT pour la table `mentee`
@@ -223,7 +233,7 @@ ALTER TABLE `mentee`
 -- AUTO_INCREMENT pour la table `mentor`
 --
 ALTER TABLE `mentor`
-  MODIFY `mentor_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `mentor_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
 
 --
 -- AUTO_INCREMENT pour la table `sessions`
