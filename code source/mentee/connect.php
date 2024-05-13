@@ -3,7 +3,7 @@
 $host = "localhost";
 $dbname = "mentorini";
 $username = "root";
-$password = "";
+$password = "admin";
 
 try {
   // Creating a new PDO instance
